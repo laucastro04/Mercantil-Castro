@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nosotros · Mercantil Castro S.A.S.</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Your shared styles -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="nosotros">
+    <!-- Header / Nav (shared) -->
+    <header class="site-header">
+        <div class="container header-inner">
+        <!-- Logo -->
+        <a class="brand" href="index.html">
+            <img src="Images/Mercantil Logo.png" alt="Mercantil Castro" class="brand-logo" />
+        </a>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="nav" id="primary-nav">
+            <ul>
+            <li><a href="vivienda.html">Vivienda</a></li>
+            <li><a href="comercial.html">Comercial</a></li>
+            <li><a class="active" aria-current="page" href="nosotros.html">Nosotros</a></li>
+            <li><a href="#residentes">Residentes</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!-- NOSOTROS -->
+    <section class="section" id="nosotros">
+        <div class="container">
+            <h2 class="section-title">Nosotros</h2>
+
+            <div class="about-grid">
+            <!-- Left: image / placeholder -->
+            <div class="about-media">
+                <!-- Optional image; the gray block stays if the image is missing -->
+                <img src="Images/nosotros-hero.jpg"
+                    alt="Equipo de Mercantil Castro"
+                    onerror="this.style.display='none'">
+            </div>
+
+            <!-- Right: copy -->
+            <div class="about-copy">
+                <p>
+                <span class="brand-accent">Mercantil Castro S.A.S.</span> es una empresa familiar que, por generaciones,
+                ha sido dueña y administradora de inmuebles en Bogotá. Más que una inmobiliaria tradicional, somos
+                propietarios directos de los espacios que ofrecemos en arriendo, lo que nos permite garantizar a nuestros
+                clientes confianza, transparencia y un servicio más cercano.
+                </p>
+
+                <p>
+                Nuestra historia está ligada al crecimiento de la ciudad y al legado de la familia Castro, que siempre ha
+                tenido como prioridad ofrecer inmuebles de calidad, con acabados finos y profesionales. Contamos con
+                propiedades tanto comerciales como de vivienda en diversos barrios de Bogotá, cuidadosamente mantenidas
+                para que cada espacio sea sinónimo de comodidad, seguridad y proyección.
+                </p>
+
+                <p>
+                Uno de nuestros mayores diferenciales es el servicio de locativas y mantenimiento, pensado para que
+                nuestros arrendatarios se sientan respaldados en todo momento. Al ser propietarios, respondemos con agilidad
+                y compromiso a cada necesidad, ofreciendo una atención personalizada que genera tranquilidad y fidelidad en
+                nuestros clientes.
+                </p>
+
+                <p>
+                En <span class="brand-accent">Mercantil Castro S.A.S.</span> creemos que cada inmueble es más que un
+                espacio físico: es un lugar donde se construyen historias, sueños y negocios. Por eso, ponemos toda nuestra
+                dedicación en cuidar y acompañar a quienes deciden confiar en nosotros.
+                </p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EL EQUIPO -->
+    <section class="section team" id="equipo">
+    <div class="container">
+        <h2 class="section-title">El Equipo</h2>
+
+        <div class="team-grid">
+        <article class="team-card">
+            <div class="team-photo">
+            <img src="Images/hero.png" alt="Maria Del Pilar Ramirez" onerror="this.style.display='none'">
+            </div>
+            <h3 class="team-name">Maria Del Pilar Ramirez</h3>
+        </article>
+
+        <article class="team-card">
+            <div class="team-photo">
+            <img src="Images/hero.png" alt="Eduard Maria" onerror="this.style.display='none'">
+            </div>
+            <h3 class="team-name">Eduard Maria</h3>
+        </article>
+
+        <article class="team-card">
+            <div class="team-photo">
+            <img src="Images/hero.png" alt="Maria Gonzales" onerror="this.style.display='none'">
+            </div>
+            <h3 class="team-name">Maria Gonzales</h3>
+        </article>
+        </div>
+    </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+    <div class="container">
+        <h2 class="section-title">Contactanos</h2>
+
+        <p class="contact-lead">
+        Siéntete libre de escribirnos a
+        <a href="mailto:info@mercantilcastrosas.com.co">info@mercantilcastrosas.com.co</a>,
+        estamos abiertas siempre para cualquier requerimiento. Te contactaremos lo más pronto posible.
+        </p>
+        <p class="contact-lead"><br>Saludos!</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+        <div class="f-row">
+            <label for="c-name">Nombre*</label>
+            <input id="c-name" name="name" type="text" placeholder="Ingresa tu nombre" required />
+        </div>
+
+        <div class="f-row f-row-2">
+            <div class="f-col">
+            <label for="c-email">Contacto*</label>
+            <input id="c-email" name="email" type="email" placeholder="Ingresa tu correo" required />
+            </div>
+            <div class="f-col">
+            <label for="c-phone" class="sr-only">Número de teléfono</label>
+            <input id="c-phone" name="phone" type="tel" inputmode="tel" placeholder="Numero de teléfono" />
+            </div>
+        </div>
+
+        <div class="f-row">
+            <label for="c-message">Mensaje*</label>
+            <textarea id="c-message" name="message" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+
+        <button class="btn-primary" type="submit">Enviar</button>
+        <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+    </section>
+
+    <!-- Footer (shared) -->
+    <footer class="site-footer" id="residentes">
+        <div class="container footer-grid">
+        <div class="footer-col">
+            <h3 class="footer-title">Mercantil Castro SAS</h3>
+            <ul class="footer-links">
+            <li><a href="/vivienda.html">Vivienda</a></li>
+            <li><a href="/comercial.html">Comercial</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#residentes">Residentes</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Whatsapp</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Contacto</h3>
+            <div class="footer-contact">
+            <p class="label">Direccion</p>
+            <p>Carrera 11A  #  94a - 23 Off 102<br/>Bogotá, Colombia</p>
+            <p class="label mt">Telefono</p>
+            <p><a href="tel:+573152626266">315 - 262-6266</a></p>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Reviews</h3>
+            <blockquote class="footer-review">
+            <p>Muchas gracias a este equipo tan dedicado y tan profesional. Excelente trabajo.</p>
+            <cite>Carolina Pinzon</cite>
+            </blockquote>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Shared scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Comercial · Mercantil Castro S.A.S.</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body data-page="comercial">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+        <a class="brand" href="index.html">
+            <img src="Images/Mercantil Logo.png" alt="Mercantil Castro" class="brand-logo" />
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <nav class="nav" id="primary-nav">
+            <ul>
+            <li><a href="vivienda.html">Vivienda</a></li>
+            <li><a class="active" aria-current="page" href="comercial.html">Comercial</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#residentes">Residentes</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!-- Title -->
+    <section class="section vivienda-intro">
+        <div class="container">
+        <h1 class="page-title">Encuentra el espacio perfecto para tu negocio</h1>
+
+        <!-- FILTERS (NO SLIDERS) -->
+        <form id="filters" class="filters filters--no-sliders">
+            <!-- selects (collapse on tablet/mobile via FAB) -->
+            <div class="filters-advanced" id="filters-advanced">
+            <div class="filters-grid">
+                <div class="f-group">
+                <label for="f-status">Filtrar por</label>
+                <select id="f-status">
+                    <option value="all">Todos</option>
+                    <option value="arriendo">Arriendo</option>
+                    <option value="venta">Venta</option>
+                </select>
+                </div>
+
+                <div class="f-group">
+                <label for="f-zone">Zona o barrio</label>
+                <select id="f-zone">
+                    <option value="all">Zona o barrio</option>
+                    <option value="Chicó Norte">Chicó Norte</option>
+                    <option value="Chapinero">Chapinero</option>
+                    <option value="Zona T">Zona T</option>
+                    <option value="Centro Internacional">Centro Internacional</option>
+                    <option value="Cedritos">Cedritos</option>
+                </select>
+                </div>
+            </div>
+            </div>
+
+            <!-- right: Sort (always visible) + FAB (tablet/mobile only) -->
+            <div class="filters-compact">
+            <button type="button"
+                    class="filters-fab"
+                    aria-expanded="false"
+                    aria-controls="filters-advanced"
+                    title="Filtros">
+                <span aria-hidden="true"></span>
+            </button>
+
+            <div class="f-group sort">
+                <label for="f-sort">Ordenar por</label>
+                <select id="f-sort">
+                <option value="relevance">Relevancia</option>
+                <option value="price-asc">Precio (menor a mayor)</option>
+                <option value="price-desc">Precio (mayor a menor)</option>
+                <option value="area-asc">Área (menor a mayor)</option>
+                <option value="area-desc">Área (mayor a menor)</option>
+                </select>
+            </div>
+            </div>
+        </form>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="section">
+        <div class="container">
+        <div class="cards-grid" id="cards"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="residentes">
+        <div class="container footer-grid">
+        <div class="footer-col">
+            <h3 class="footer-title">Mercantil Castro SAS</h3>
+            <ul class="footer-links">
+            <li><a href="vivienda.html">Vivienda</a></li>
+            <li><a href="comercial.html">Comercial</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#residentes">Residentes</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Whatsapp</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Contacto</h3>
+            <div class="footer-contact">
+            <p class="label">Direccion</p>
+            <p>Carrera 11A  #  94a - 23 Off 102<br/>Bogotá, Colombia</p>
+            <p class="label mt">Telefono</p>
+            <p><a href="tel:+573152626266">315 - 262-6266</a></p>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Reviews</h3>
+            <blockquote class="footer-review">
+            <p>Muchas gracias a este equipo tan dedicado y tan profesional. Excelente trabajo.</p>
+            <cite>Carolina Pinzon</cite>
+            </blockquote>
+        </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    </body>
+</html>

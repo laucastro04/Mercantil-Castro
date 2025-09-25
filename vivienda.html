@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vivienda · Mercantil Castro S.A.S.</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Header (same as home) -->
+    <header class="site-header">
+        <div class="container header-inner">
+        <a class="brand" href="index.html">
+            <img src="/Images/Mercantil Logo.png" alt="Mercantil Castro" class="brand-logo" />
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <nav class="nav" id="primary-nav">
+            <ul>
+            <li><a class="active" aria-current="page" href="vivienda.html">Vivienda</a></li>
+            <li><a href="/comercial.html">Comercial</a></li>
+            <li><a href="/nosotros.html">Nosotros</a></li>
+            <li><a href="#residentes">Residentes</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="section vivienda-intro">
+        <div class="container">
+        <h1 class="page-title">Encuentra tu hogar</h1>
+
+    <!-- Filters -->
+    <form id="filters" class="filters">
+    <!-- Row 1: the 5 selects (collapsed on tablet) -->
+    <div class="filters-advanced" id="filters-advanced">
+        <div class="filters-grid">
+        <div class="f-group">
+            <label for="f-status">Filtrar por</label>
+            <select id="f-status">
+            <option value="all">Todos</option>
+            <option value="arriendo">Arriendo</option>
+            <option value="venta">Venta</option>
+            </select>
+        </div>
+
+        <div class="f-group">
+            <label for="f-type">Inmueble</label>
+            <select id="f-type">
+            <option value="all">Inmueble</option>
+            <option value="Apartamento">Apartamento</option>
+            <option value="Casa">Casa</option>
+            </select>
+        </div>
+
+        <div class="f-group">
+            <label for="f-zone">Zona o barrio</label>
+            <select id="f-zone">
+            <option value="all">Zona o barrio</option>
+            <option value="Chicó Norte">Chicó Norte</option>
+            <option value="Cedritos">Cedritos</option>
+            <option value="Usaquén">Usaquén</option>
+            <option value="Chapinero">Chapinero</option>
+            </select>
+        </div>
+
+        <div class="f-group">
+            <label for="f-rooms">Habitaciones</label>
+            <select id="f-rooms">
+            <option value="all">Habitaciones</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            </select>
+        </div>
+
+        <div class="f-group">
+            <label for="f-baths">Baños</label>
+            <select id="f-baths">
+            <option value="all">Baños</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            </select>
+        </div>
+        </div>
+    </div>
+
+    <!-- Row 2 (left): sliders -->
+    <div class="filters-sliders-core">
+        <div class="f-group range">
+        <label for="f-area">Área</label>
+        <div class="range-head">
+            <span>0 m²</span>
+            <span id="areaValue">900 m²</span>
+        </div>
+        <input type="range" id="f-area" min="0" max="900" step="10" value="900">
+        </div>
+
+        <div class="f-group range">
+        <label for="f-price">Precio</label>
+        <div class="range-head">
+            <span>$0</span>
+            <span id="priceValue">$5,000,000,000</span>
+        </div>
+        <input type="range" id="f-price" min="0" max="5000000000" step="50000000" value="5000000000">
+        </div>
+    </div>
+
+    <!-- Row 2 (right): sort + FAB (FAB only shows on tablet/mobile) -->
+    <div class="filters-compact">
+        <button type="button"
+                class="filters-fab"
+                aria-expanded="false"
+                aria-controls="filters-advanced"
+                title="Filtros">
+        <span aria-hidden="true"></span>
+        </button>
+
+        <div class="f-group sort">
+        <label for="f-sort">Ordenar por</label>
+        <select id="f-sort">
+            <option value="relevance">Relevancia</option>
+            <option value="price-asc">Precio (menor a mayor)</option>
+            <option value="price-desc">Precio (mayor a menor)</option>
+            <option value="area-asc">Área (menor a mayor)</option>
+            <option value="area-desc">Área (mayor a menor)</option>
+        </select>
+        </div>
+    </div>
+    </form>
+    </div>
+    </section>
+
+    <!-- Cards grid -->
+    <section class="section">
+        <div class="container">
+        <div class="cards-grid" id="cards"></div>
+        </div>
+    </section>
+
+    <!-- Footer (same as home) -->
+    <footer class="site-footer" id="residentes">
+        <div class="container footer-grid">
+        <div class="footer-col">
+            <h3 class="footer-title">Mercantil Castro SAS</h3>
+            <ul class="footer-links">
+            <li><a href="vivienda.html">Vivienda</a></li>
+            <li><a href="/comercial.html">Comercial</a></li>
+            <li><a href="/nosotros.html">Nosotros</a></li>
+            <li><a href="#residentes">Residentes</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Whatsapp</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Contacto</h3>
+            <div class="footer-contact">
+            <p class="label">Direccion</p>
+            <p>Carrera 11A  #  94a - 23 Off 102<br/>Bogotá, Colombia</p>
+            <p class="label mt">Telefono</p>
+            <p><a href="tel:+573152626266">315 - 262-6266</a></p>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Reviews</h3>
+            <blockquote class="footer-review">
+            <p>Muchas gracias a este equipo tan dedicado y tan profesional. Excelente trabajo.</p>
+            <cite>Carolina Pinzon</cite>
+            </blockquote>
+        </div>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

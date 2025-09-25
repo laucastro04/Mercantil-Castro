@@ -62,8 +62,7 @@ toggleScrolledClass();
 window.addEventListener('scroll', toggleScrolledClass);
 
 /*  =========================================================
-    VIVIENDA page — runs ONLY if Vivienda-specific controls exist
-    Guard: requires #cards + #f-type + #f-area + #f-price
+    VIVIENDA page 
     ========================================================= */
 (function viviendaModule(){
     const cardsEl = document.getElementById('cards');
@@ -89,7 +88,7 @@ window.addEventListener('scroll', toggleScrolledClass);
         fabBtn.setAttribute('aria-expanded', String(open));
         });
 
-        // close if you tap outside (nice to have)
+        // close if you tap outside
         document.addEventListener('click', (e) => {
         if (!filtersWrap.classList.contains('open')) return;
         if (!filtersWrap.contains(e.target)) {
@@ -98,7 +97,7 @@ window.addEventListener('scroll', toggleScrolledClass);
         }
         });
 
-        // Esc to close (nice to have)
+        // Esc to close
         document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && filtersWrap.classList.contains('open')) {
             filtersWrap.classList.remove('open');
@@ -225,8 +224,7 @@ window.addEventListener('scroll', toggleScrolledClass);
 
 
 /*  =========================================================
-    COMERCIAL page — NO SLIDERS, isolated array, own renderer
-    Guard: requires #cards + form.filters--no-sliders
+    COMERCIAL page
     ========================================================= */
 (function comercialModule(){
     const cardsEl = document.getElementById('cards');
@@ -358,7 +356,6 @@ window.addEventListener('scroll', toggleScrolledClass);
     renderComercial();
 })();
 
-// Contact form: simple client-side acknowledgement
 // ===== NEW: Contact form submission via Formspree =====
 (function contactForm(){
     const form   = document.getElementById('contact-form');
@@ -405,7 +402,7 @@ window.addEventListener('scroll', toggleScrolledClass);
     });
 })();
 
-// ===== NEW (APTO): simple gallery swap =====
+// ===== (APTO): simple gallery swap =====
 (function aptoGallery(){
     const hero = document.getElementById('apto-hero');
     const strip = document.getElementById('apto-thumbs');
@@ -426,7 +423,7 @@ window.addEventListener('scroll', toggleScrolledClass);
 })();
 
 /* ===============================
-    LIGHTBOX (flex version) — NEW
+    LIGHTBOX
     =============================== */
 
 // Elements

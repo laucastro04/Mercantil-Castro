@@ -207,7 +207,7 @@ button a {
 }
 .prop-prices span { display: block; font-size: 12px; color: #000; }
 
-/* Bottom features row (exact look) */
+/* Bottom features row */
 .prop-icons {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 0; list-style: none;
@@ -275,7 +275,7 @@ button a {
 /* 2-column layout on wider screens */
 @media (min-width: 992px) {
     .about-grid {
-        grid-template-columns: 1.15fr 1fr;  /* image a bit wider, like your mock */
+        grid-template-columns: 1.15fr 1fr;  
         gap: 36px;
     }
     .about-media { min-height: 380px; }
@@ -361,7 +361,7 @@ button a {
 }
 
 /* =========================
-    Vivienda page (FULL block)
+    Vivienda page
    ========================= */
 
 /* Title */
@@ -724,7 +724,7 @@ button a {
 }
 .btn-primary:hover{ filter:brightness(.95); }
 
-/* small helper if you ever need a visually-hidden label */
+/* small helper if visually-hidden labels are needed*/
 .sr-only{
     position:absolute!important;
     width:1px;height:1px;
@@ -886,9 +886,9 @@ button a {
 .btn-block{
     width: 100%;
     text-align: center;
-    padding: 14px 18px;                    /* adjust if you want taller buttons */
+    padding: 14px 18px;                    /* adjust for taller buttons */
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;                       /* bump up size to match your mock */
+    font-size: 22px;                       
     text-decoration: none;
     display: inline-block;
 }
@@ -925,7 +925,7 @@ button a {
 }
 
     /* =========================
-    LIGHTBOX — flex layout (replace the whole section)
+    LIGHTBOX — flex layout 
     ========================= */
 
 /* Clickable gallery images */
@@ -964,9 +964,9 @@ body[data-page="apto"] .lb-frame{
     gap: 24px;                         /* pushes arrows away from image */
 }
 
-/* Arrows as real flex items (no absolute positioning) */
+/* Arrows as real flex items */
 body[data-page="apto"] .lb-arrow{
-    position: static !important;       /* neutralize any old absolute rules */
+    position: static !important;       
     top: auto !important; left: auto !important; right: auto !important; transform: none !important;
     flex: 0 0 44px;
     width: 44px; height: 44px;

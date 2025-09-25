@@ -156,7 +156,7 @@ window.addEventListener('scroll', toggleScrolledClass);
             ${hasVenta ? '<span class="badge">Venta</span>' : ''}
             ${hasArr ? '<span class="badge" style="right:66px">Arriendo</span>' : ''}
             <img src="${h.img}" alt="">
-            <div class="watermark"><img src="Images/Mercantil Logo.png" alt=""></div>
+            <div class="watermark"><img src="Images/mercantil-logo.png" alt=""></div>
             </div>
             <div class="prop-body">
             <h3 class="prop-title">Espectacular apartamento en gran edificio de ${h.area} m2</h3>
@@ -268,7 +268,7 @@ window.addEventListener('scroll', toggleScrolledClass);
             ${hasVenta ? '<span class="badge">Venta</span>' : ''}
             ${hasArr ? '<span class="badge" style="right:66px">Arriendo</span>' : ''}
             <img src="${s.img}" alt="">
-            <div class="watermark"><img src="Images/Mercantil Logo.png" alt=""></div>
+            <div class="watermark"><img src="Images/mercantil-logo.png" alt=""></div>
             </div>
             <div class="prop-body">
             <h3 class="prop-title">${s.type} en zona comercial — ${s.area} m²</h3>

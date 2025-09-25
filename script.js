@@ -72,6 +72,41 @@ window.addEventListener('scroll', toggleScrolledClass);
     const fPrice = document.getElementById('f-price');
     if (!cardsEl || !fType || !fArea || !fPrice) return; // not Vivienda → bail
 
+    // --- Mobile filters FAB toggle ---
+    const filtersWrap = document.querySelector('.filters');
+    const fabBtn = filtersWrap?.querySelector('.filters-fab');
+
+    if (filtersWrap && fabBtn) {
+        // optional a11y wiring
+        const adv = filtersWrap.querySelector('.filters-advanced');
+        if (adv && !adv.id) adv.id = 'filters-advanced';
+        if (adv?.id) fabBtn.setAttribute('aria-controls', adv.id);
+        fabBtn.setAttribute('aria-expanded', 'false');
+
+        fabBtn.addEventListener('click', () => {
+        filtersWrap.classList.toggle('open');
+        const open = filtersWrap.classList.contains('open');
+        fabBtn.setAttribute('aria-expanded', String(open));
+        });
+
+        // close if you tap outside (nice to have)
+        document.addEventListener('click', (e) => {
+        if (!filtersWrap.classList.contains('open')) return;
+        if (!filtersWrap.contains(e.target)) {
+            filtersWrap.classList.remove('open');
+            fabBtn.setAttribute('aria-expanded', 'false');
+        }
+        });
+
+        // Esc to close (nice to have)
+        document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && filtersWrap.classList.contains('open')) {
+            filtersWrap.classList.remove('open');
+            fabBtn.setAttribute('aria-expanded', 'false');
+        }
+        });
+    }
+
     // Other Vivienda filters
     const fStatus = document.getElementById('f-status');
     const fZone   = document.getElementById('f-zone');
@@ -159,7 +194,7 @@ window.addEventListener('scroll', toggleScrolledClass);
             <div class="watermark"><img src="Images/mercantil-logo.png" alt=""></div>
             </div>
             <div class="prop-body">
-            <h3 class="prop-title">Espectacular apartamento en gran edificio de ${h.area} m2</h3>
+            <h3 class="prop-title"><a href="apto.html">Espectacular apartamento en gran edificio de 100 m2</a></h3>
             <p class="prop-meta"><img src="Images/location.png" alt=""> ${h.address}</p>
 
             <div class="prop-prices">
@@ -271,7 +306,7 @@ window.addEventListener('scroll', toggleScrolledClass);
             <div class="watermark"><img src="Images/mercantil-logo.png" alt=""></div>
             </div>
             <div class="prop-body">
-            <h3 class="prop-title">${s.type} en zona comercial — ${s.area} m²</h3>
+            <h3 class="prop-title"><a href="off.html">Linda y moderna oficina para 10 personas en Santa Barbara</a></h3>
             <p class="prop-meta"><img src="Images/location.png" alt=""> ${s.address}</p>
 
             <div class="prop-prices">
